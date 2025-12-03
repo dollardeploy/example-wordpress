@@ -18,6 +18,14 @@ You don't need much to configure it to deploy with DollarDeploy, follow this sec
 * Deploy => Custom pre-start command: sudo apt install -y php-fpm php-pgsql php-mysql
 * Deploy => Web path: web
 
+### Deploying on command line
+
+```bash
+npm install -g @dollardeploy/cli@latest
+DOLLARDEPLOY_API_KEY=... ddc --url https://github.com/dollardeploy/example-
+wordpress --provider datacrunch --services mariadb --app:preStartCmd "sudo apt install -y php-fpm php-pgsql php-mysql" --app:type php --app:webPath web --app:name wordpress
+```
+
 ### App Environment
 
 * DATABASE_URL=${MARIADB_URL}
