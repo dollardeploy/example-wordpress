@@ -23,7 +23,9 @@ You don't need much to configure it to deploy with DollarDeploy, follow this sec
 ```bash
 npm install -g @dollardeploy/cli@latest
 DOLLARDEPLOY_API_KEY=... ddc --url https://github.com/dollardeploy/example-
-wordpress --provider datacrunch --services mariadb --app:preStartCmd "sudo apt install -y php-fpm php-pgsql php-mysql" --app:type php --app:webPath web --app:name wordpress
+wordpress --provider datacrunch --services mariadb \
+  --app:preStartCmd "sudo apt install -y php-fpm php-pgsql php-mysql" \
+  --app:type php --app:webPath web --app:name wordpress
 ```
 
 ### App Environment
